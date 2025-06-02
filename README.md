@@ -11,13 +11,13 @@ Blaze Design System is a reusable component library for building consistent and 
 ## Installation
 
 ```bash
-npm install blaze-design-system
+npm install @blairsuth/blaze-designsystem
 ```
 
 ## Usage
 
 ```js
-import { Button } from "blaze-design-system";
+import { Button } from "@blairsuth/blaze-designsystem";
 
 <Button>Click Me</Button>;
 ```
