@@ -1,7 +1,7 @@
 {
   "name": "@blairsuth/blaze-designsystem",
   "private": false,
-  "version": "1.0.13",
+  "version": "1.0.15",
   "type": "module",
   "main": "dist/blaze-designsystem.cjs.js",
   "module": "dist/blaze-designsystem.es.js",
@@ -15,7 +15,8 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "lucide-react": "^0.344.0"
+    "lucide-react": "^0.344.0",
+    "styled-components": "^6.1.19"
   },
   "peerDependencies": {
     "react": ">=18.0.0",

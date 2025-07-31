@@ -13,3 +13,4 @@ export { CardTitle } from "./components/Card";
 export { CardDescription } from "./components/Card";
 export { CardContent } from "./components/Card";
 export { CardFooter } from "./components/Card";
+export { Tooltip } from "./components/ToolTip";

@@ -1,7 +1,8 @@
-import React from 'react';
-import { cn } from '../utils/cn';
+import React from "react";
+import { cn } from "../utils/cn";
 
-export interface TextFieldProps extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface TextFieldProps
+  extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   helperText?: string;
   error?: boolean;
@@ -11,23 +12,27 @@ export interface TextFieldProps extends React.InputHTMLAttributes<HTMLInputEleme
 }
 
 export const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
-  ({ 
-    className, 
-    label, 
-    helperText, 
-    error = false, 
-    fullWidth = false,
-    leadingIcon,
-    trailingIcon,
-    id,
-    ...props 
-  }, ref) => {
-    const inputId = id || React.useId();
-    
+  (
+    {
+      className,
+      label,
+      helperText,
+      error = false,
+      fullWidth = false,
+      leadingIcon,
+      trailingIcon,
+      id,
+      ...props
+    },
+    ref
+  ) => {
+    const generatedId = React.useId();
+    const inputId = id ?? generatedId;
+
     return (
-      <div className={cn('flex flex-col gap-1.5', fullWidth && 'w-full')}>
+      <div className={cn("flex flex-col gap-1.5", fullWidth && "w-full")}>
         {label && (
-          <label 
+          <label
             htmlFor={inputId}
             className="text-sm font-medium text-neutral-900"
           >
@@ -44,14 +49,14 @@ export const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
             id={inputId}
             ref={ref}
             className={cn(
-              'rounded-md border px-3 py-2 text-sm outline-none transition-all',
-              leadingIcon && 'pl-10',
-              trailingIcon && 'pr-10',
-              'focus:ring-2 focus:ring-offset-1',
+              "rounded-md border px-3 py-2 text-sm outline-none transition-all",
+              leadingIcon ? "pl-10" : undefined,
+              trailingIcon ? "pr-10" : undefined,
+              "focus:ring-2 focus:ring-offset-1",
               error
-                ? 'border-error-500 focus:border-error-500 focus:ring-error-500/20'
-                : 'border-neutral-300 focus:border-primary-500 focus:ring-primary-500/20',
-              fullWidth && 'w-full',
+                ? "border-error-500 focus:border-error-500 focus:ring-error-500/20"
+                : "border-neutral-300 focus:border-primary-500 focus:ring-primary-500/20",
+              fullWidth && "w-full",
               className
             )}
             {...props}
@@ -63,9 +68,9 @@ export const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
           )}
         </div>
         {helperText && (
-          <p 
+          <p
             className={cn(
-              "text-xs", 
+              "text-xs",
               error ? "text-error-500" : "text-neutral-500"
             )}
           >
@@ -77,6 +82,6 @@ export const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
   }
 );
 
-TextField.displayName = 'TextField';
+TextField.displayName = "TextField";
 
 export default TextField;
