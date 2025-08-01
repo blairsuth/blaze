@@ -38,7 +38,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const variantStyles = {
       filled: {
         primary:
-          "bg-primary-600 text-green hover:bg-primary-700 focus:ring-primary-600",
+          "bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-600",
         secondary:
           "bg-secondary-600 text-white hover:bg-secondary-700 focus:ring-secondary-600",
         tertiary:
