@@ -14,4 +14,4 @@ export { CardDescription } from "./components/Card";
 export { CardContent } from "./components/Card";
 export { CardFooter } from "./components/Card";
 export { Tooltip } from "./components/ToolTip";
-export { default as Accordion } from "./components/Accordion";
+export { Accordion } from "./components/Accordion";
