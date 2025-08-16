@@ -6,7 +6,7 @@ type AccordionProps = {
   items: AccordionItemData[];
 };
 
-const Accordion: React.FC<AccordionProps> = ({ items }) => {
+export const Accordion: React.FC<AccordionProps> = ({ items }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const handleToggle = (idx: number) => {
